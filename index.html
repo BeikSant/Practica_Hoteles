@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css"></link>
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    </link>
 
     <title>Hoteles</title>
 </head>
@@ -16,8 +17,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    
+
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
         <a class="navbar-brand" href="#">Hoteles</a>
@@ -53,95 +54,194 @@
             </ol>
         </nav>
 
+        <!--
+            Inicio del collapse
+        -->
         <div class="d-flex flex-wrap flex-row">
             <div class="col-sm-4">
-                <p>
-                <h3>¿Cómo funciona?</h3>
-                <p>Búsca los hoteles de acuerdo a tu preferencia</p>
-                </p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona"
+                    aria-expanded="false" aria-controls="multiCollapse1">¿Cómo funciona?</button>
             </div>
             <div class="col-sm-4">
-                <p>
-                <h3>¿Dónde puedo reservar?</h3>
-                <p>Elige la ciudad que te interesa y luego realiza la reserva con tus datos</p>
-                </p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva"
+                    aria-expanded="false" aria-controls="multiCollapse2">¿Dónde puedo reservar?</button>
             </div>
             <div class="col-sm-4">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago"
+                    aria-expanded="false" aria-controls="multiCollapse3">¿Cómo pago?</button>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap flex-row">
+            <div class="col-sm-4 collapse multi-collapse" id=funciona>
                 <p>
-                <h3>¿Cómo pago?</h3>
-                <p>Utiliza tu tarjeta favorita</p>
+                    <p>Búsca los hoteles de acuerdo a tu preferencia</p>
+                </p>
+            </div>
+            <div class="col-sm-4 collapse multi-collapse" id="reserva">
+                <p>
+                    <p>Elige la ciudad que te interesa y luego realiza la reserva con tus datos</p>
+                </p>
+            </div>
+            <div class="col-sm-4 collapse multi-collapse" id="pago">
+                <p>
+                    <p>Utiliza tu tarjeta favorita</p>
                 </p>
             </div>
         </div>
 
+        <!--
+            Fin del collapse
+        -->
+
+
+        <!--
+            Empieza el carrusel
+        -->
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="1000">
+                    <img src="imagenes/barcelona.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="1000">
+                    <img src="imagenes/puertaCdLoja.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="1000">
+                    <img src="imagenes/monaco.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon carousel-dark" aria-hidden="true"></span>
+                <span class="sr-only">Anterios</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+
+
+        <!--
+            Finaliza el carrusel
+        -->
+
+
         <div class="d-flex flex-wrap flex-row-reverse">
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Barcelona</h5>
+                    <h6 class="card-subtitle">España</h6>
+                    <img class="card-img-top" src="imagenes/barcelona.jpg">
+                    <p class="card-text">Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto"
+                        id=contactoBtn>Contacto</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn_reserva">Reservar</button>
                 </div>
             </div>
 
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Mónaco</h5>
+                    <h6 class="card-subtitle">España</h6>
+                    <img class="card-img-top" src="imagenes/monaco.jpg">
+                    <p class="card-text">Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
                 </div>
                 <div>
-                    <button class="btn btn-secondary btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-success btn_reserva">Reservar</button>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
                 </div>
             </div>
 
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Buenos Aires</h5>
+                    <h6 class="card-subtitle">Argentina</h6>
+                    <img class="card-img-top" src="imagenes/buenosAires.jpg">
+                    <p class="card-text">Hotel ubicado en el obelisco en pleno centro de buenos aires.</p>
                 </div>
                 <div>
-                    <button class="btn btn-danger btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-warning btn_reserva">Reservar</button>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
                 </div>
             </div>
 
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Loja</h5>
+                    <h6 class="card-subtitle">Ecuador</h6>
+                    <img class="card-img-top" src="imagenes/puertaCdLoja.jpg">
+                    <p class="card-text">Hotel ubicado frente a la puerta de la ciudad</p>
                 </div>
                 <div>
-                    <button class="bditn btn-info btn_reserva">Reservar</button>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
                 </div>
             </div>
 
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Iguazú</h5>
+                    <h6 class="card-subtitle">Paraguay</h6>
+                    <img class="card-img-top" src="imagenes/iguazu.jpg">
+                    <p class="card-text">Hotel ubicado entre Brazil y Argentina, en Paraguay</p>
                 </div>
                 <div>
-                    <button class="btn btn-dark btn_reserva">Reservar</button>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
+                </div>
+            </div>
+
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-body">
+                    <h5 class="card-title">Hotel Colonia</h5>
+                    <h6 class="card-subtitle">España</h6>
+                    <img class="card-img-top" src="imagenes/colonia.jpg">
+                    <p class="card-text">Hotel ubicado ciudad Portuaria a 3 horas de Montevideo</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
+                </div>
+            </div>
+
+            <div class="card card_hotel d-flex flex-column justify-content-between">
+                <div class="car-dody">
+                    <h5 class="card-title">Hotel Barcelona</h5>
+                    <h6 class="card-subtitle">España</h6>
+                    <img class="card-img-top" src="imagenes/puertaCdLoja.jpg">
+                    <p class="card-text">Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn_reserva">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exapleModalLabel">Contacto del Hotel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Tu email</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Mensaje</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Enviar</button>
                 </div>
             </div>
         </div>
@@ -153,7 +253,7 @@
                 <a href="http://www.facebook.com">facebook</a>
                 <a href="http://www.twitter.com">twitter</a>
                 <a href="http://www.instagram.com">instagram</a>
-                <a href="http://www.google.com.ec">google</a>            </div>
+                <a href="http://www.google.com.ec">google</a> </div>
             <div class="col-sm-4">
                 <address>
                     <h3>Oficina Central</h3>

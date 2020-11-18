@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css"></link>
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    </link>
 
     <title>Hoteles</title>
 </head>
@@ -16,8 +17,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    
+
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 
         <a class="navbar-brand" href="#">Hoteles</a>
@@ -29,9 +30,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="./precios.html">Precios</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Precios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Términos</a></li>
                 <li class="nav-item"><a class="nav-link" href="./contacto.html">Contactos</a></li>
             </ul>
@@ -47,101 +48,155 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Home</li>
+                <li class="breadcrumb-item" aria-current="page">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Precios
+                </li>
             </ol>
         </nav>
 
-        <div class="d-flex flex-wrap flex-row">
-            <div class="col-sm-4">
-                <p>
-                <h3>¿Cómo funciona?</h3>
-                <p>Búsca los hoteles de acuerdo a tu preferencia</p>
-                </p>
+        <!--
+            tab
+        -->
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="tab">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#compara" role="tab"
+                    aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tarjetas" role="tab"
+                    aria-controls="profile" aria-selected="false">Profile</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#comentario" role="tab"
+                    aria-controls="messages" aria-selected="false">Messages</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="compara" role="tabpanel" aria-labelledby="compara-tab">
+                <table class="table table-striped">
+                    <!--
+                        tabla
+                    -->
+                    <thead class="table-dark">
+                        <th>Calidad</th>
+                        <th>Pinamar</th>
+                        <th>Mar del Plata</th>
+                        <th>San Clemente</th>
+                        <th>Sra. Teresita</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 <span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>2 <span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>3 <span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>4 <span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>5 <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                            </td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col-sm-4">
-                <p>
-                <h3>¿Dónde puedo reservar?</h3>
-                <p>Elige la ciudad que te interesa y luego realiza la reserva con tus datos</p>
-                </p>
-            </div>
-            <div class="col-sm-4">
-                <p>
-                <h3>¿Cómo pago?</h3>
-                <p>Utiliza tu tarjeta favorita</p>
-                </p>
+            <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
+                <!--
+                    Acordion
+                -->
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tarjeta Básica
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Puede reservar en tres meses sin interés
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Tarjetas VIP
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Puede reservar en 6 cuotas sin interés.
+                                Al llegar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Tarjeta Black
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Tarjeta no aceptada.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="tab-pane fade" id="comentarios" role="tabpanel" aria-labelledby="comentarios-tab">
+            <!--fin del acordion-->
 
-        <div class="d-flex flex-wrap flex-row-reverse">
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-primary btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-secondary btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-success btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-danger btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-warning btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="bditn btn-info btn_reserva">Reservar</button>
-                </div>
-            </div>
-
-            <div class="card_hotel d-flex flex-column justify-content-between">
-                <div>
-                    <h4>Hotel Barcelona</h4>
-                    <p>Hotel ubicado en pleno centro de Barcelos a pocos metros de la playa</p>
-                </div>
-                <div>
-                    <button class="btn btn-dark btn_reserva">Reservar</button>
-                </div>
-            </div>
+    <div>
+        Comentanos acá
+    </div>
         </div>
     </div>
 
@@ -151,7 +206,7 @@
                 <a href="http://www.facebook.com">facebook</a>
                 <a href="http://www.twitter.com">twitter</a>
                 <a href="http://www.instagram.com">instagram</a>
-                <a href="http://www.google.com.ec">google</a>            </div>
+                <a href="http://www.google.com.ec">google</a> </div>
             <div class="col-sm-4">
                 <address>
                     <h3>Oficina Central</h3>
